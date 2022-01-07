@@ -1,0 +1,93 @@
+.about {
+  display: flex;
+  justify-content: space-between;
+
+  @include responsive(tab-ver) {
+    flex-direction: column;
+  }
+
+  &__item {
+    flex: 0 0 calc(50% - 2rem);
+
+    @include responsive(tab-ver) {
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+
+  &__presentacion {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: $color-blanco;
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    @include responsive(tab-hor) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-item {
+      position: relative;
+      padding: 3rem;
+      overflow: hidden;
+      text-align: center;
+      border-bottom: 3px solid transparent;
+      border-radius: 1rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-bottom: 3px solid $color-primario;
+
+        @include responsive(tab-hor) {
+          border-bottom: 3px solid transparent;
+        }
+      }
+    }
+
+    &-icon {
+      font-size: 5rem;
+      transition: all 0.3s ease;
+    }
+
+    &-tecnology {
+      position: absolute;
+      left: 50%;
+      bottom: 0.3rem;
+      font-size: 1.3rem;
+      transform: translate(-50%, 100%);
+      opacity: 0;
+      transition: all 0.5s ease;
+
+      @include responsive(tab-hor) {
+        transform: translate(-50%, 0);
+        opacity: 1;
+      }
+    }
+    &-item:hover &-icon,
+    &-item:hover &-tecnology {
+      color: $color-primario;
+
+      @include responsive(tab-hor) {
+        color: $color-gris-oscuro;
+      }
+    }
+
+    &-item:hover &-icon {
+      transform: translateY(-1rem);
+
+      @include responsive(tab-hor) {
+        transform: translateY(0);
+      }
+    }
+
+    &-item:hover &-tecnology {
+      transform: translate(-50%, 0);
+      opacity: 1;
+    }
+  }
+}

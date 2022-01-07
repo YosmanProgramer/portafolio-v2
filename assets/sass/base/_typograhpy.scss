@@ -1,0 +1,67 @@
+.heading-primary {
+  font-size: 4rem;
+  font-weight: 700;
+  color: $color-primario;
+  text-align: center;
+  animation: rightToLeft 1s ease-in-out;
+  span {
+    display: block;
+    font-size: 3rem;
+    font-weight: 400;
+    color: $color-blanco;
+  }
+
+  @include responsive(tab-hor) {
+    font-size: 3.5rem;
+    span {
+      font-size: 2.5rem;
+    }
+    animation: bottomToTop 1s ease-in-out;
+  }
+
+  @include responsive(phone) {
+    font-size: 2.7rem;
+    span {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+.heading-secondary {
+  font-size: 3.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $color-blanco;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.2rem;
+    margin: 0 auto 0.5rem auto;
+    background-color: $color-primario;
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.heading-four {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $color-blanco;
+}
+
+.heading-five {
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $color-primario;
+}
+
+.paragraph {
+  font-size: 1.8rem;
+}

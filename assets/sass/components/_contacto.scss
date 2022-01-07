@@ -1,0 +1,48 @@
+.contacto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include responsive(phone) {
+    flex-direction: column;
+  }
+
+  &__item {
+    flex: 0 0 calc(25% - 1rem);
+    text-align: center;
+    background-color: $color-negro-1;
+    border-radius: 0.5rem;
+
+    @include responsive(phone) {
+      flex: 1;
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      display: flex;
+      flex-direction: column;
+      padding: 6rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-blanco;
+
+      @include responsive(tab-hor) {
+        color: $color-gris-oscuro;
+      }
+    }
+  }
+  &__icon {
+    font-size: 4rem;
+  }
+}

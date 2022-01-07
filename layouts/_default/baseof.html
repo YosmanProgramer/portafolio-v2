@@ -4,11 +4,7 @@
 <head>
     {{ partial "head.html" . }}
     {{ block "head" . }}{{ end }}
-    {{ if .Title }}
-    <title>{{.Title}} | {{ .Site.Title }}</title>
-    {{ else }}
-    <title>{{ .Site.Title }}</title>
-    {{ end }}
+    <title>{{ .Title }}</title>
 </head>
 
 <body>
@@ -17,8 +13,11 @@
         {{ block "main" . }}{{ end }}
     </main>
     {{ partial "footer" . }}
-    {{ $default := resources.Get "js/default.js" | js.Build (dict "minify" true)}}
-    <script src="{{ $default.Permalink }}"></script>
+    <div class="btn btn--up">
+        <i class="fas fa-angle-up btn__icon"></i>
+      </div>
+    {{ $main := resources.Get "js/main.js" | js.Build (dict "minify" true)}}
+    <script src="{{ $main.Permalink }}"></script>
     {{ block "js" . }}{{ end }}
 </body>
 

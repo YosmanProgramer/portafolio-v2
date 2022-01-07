@@ -1,0 +1,48 @@
+//swipper
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    color: $color-primario !important;
+}
+
+.swiper-button-prev {
+    left: 3rem !important;
+}
+
+.swiper-button-next {
+    right: 3rem !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: $color-primario !important;
+}
+
+.swiper-thumbs {
+    margin-top: 2rem;
+    transition: all 0.3s;
+}
+
+.swiper-thumbs img:hover {
+    transform: scale(1.1);
+}
+
+.swiper-thumbs .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.swiper-thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+@include responsive(tab-hor) {
+    .swiper-main .swiper-button-prev,
+    .swiper-main .swiper-button-next {
+        display: none;
+    }
+    .swiper-main .swiper-pagination {
+        display: none;
+    }
+}

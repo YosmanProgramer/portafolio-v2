@@ -1,0 +1,90 @@
+.button {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    color: $color-blanco;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: $color-primario-oscuro;
+    transform: translateY(-0.5rem) scale(1.05);
+  }
+
+  &:active {
+    transform: translateY(0) scale(1);
+  }
+
+  &--primario {
+    background-color: $color-primario;
+  }
+
+  &__icon {
+    margin-right: 0.5rem;
+    font-size: 1.8rem;
+  }
+}
+
+.btn {
+  position: fixed;
+  bottom: 0;
+  right: 3.5rem;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  color: $color-blanco;
+  border-radius: 1rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:active {
+    background-color: $color-primario-oscuro;
+  }
+
+  &--active {
+    opacity: 1;
+    bottom: 3.5rem;
+  }
+
+  &--up {
+    background-color: $color-primario;
+  }
+  &__icon {
+    font-size: 2rem;
+  }
+}
+
+.boton {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 0.4rem;
+    }
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-blanco;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-primario-oscuro;
+  }
+
+  &__icon {
+    margin-right: 0.5rem;
+    font-size: 1.6rem;
+  }
+}

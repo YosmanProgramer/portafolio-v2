@@ -2,14 +2,4 @@ baseURL = "/"
 defaultContentLanguage = "es"
 languageCode = "es"
 taxonomies = []
-title = "La Sobremesa"
-
-[languages]
-[languages.es]
-contentDir = "content/es"
-languageName = "Español"
-weight = 1
-[languages.en]
-contentDir = "content/en"
-languageName = "English"
-weight = 2
+title = "Portafolio"

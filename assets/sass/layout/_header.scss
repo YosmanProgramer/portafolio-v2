@@ -1,0 +1,56 @@
+.header {
+  height: 100vh;
+
+  background-image: linear-gradient(
+      rgba($color-negro, 0.8),
+      rgba($color-negro, 0.8)
+    ),
+    url(../img/banner-medium.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  @include responsive(phone) {
+    background-image: linear-gradient(
+        rgba($color-negro, 0.8),
+        rgba($color-negro, 0.8)
+      ),
+      url(../img/banner-small.jpg);
+  }
+
+  @include responsive(big-desk) {
+    background-image: linear-gradient(
+        rgba($color-negro, 0.8),
+        rgba($color-negro, 0.8)
+      ),
+      url(../img/banner-big.jpg);
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    transform: translate(-50%, -50%);
+
+    @include responsive(tab-hor) {
+      flex-direction: column;
+    }
+  }
+
+  &__photo {
+    display: block;
+    width: 18rem;
+    height: 18rem;
+    margin-right: 2.5rem;
+    border-radius: 50%;
+    animation: leftToRight 1s ease-in-out;
+
+    @include responsive(tab-hor) {
+      margin-right: 0;
+      margin-bottom: 2.5rem;
+      animation: topToBottom 1s ease-in-out;
+    }
+  }
+}

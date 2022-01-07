@@ -1,0 +1,43 @@
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  @include responsive(phone) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &__item {
+    padding: 4rem;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:active {
+      border-bottom: 3px solid $color-primario;
+
+      @include responsive(tab-hor) {
+        border-bottom: 3px solid transparent;
+      }
+    }
+  }
+
+  &__icon {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  &__item:hover &__icon {
+    color: $color-primario;
+
+    @include responsive(tab-hor) {
+      color: inherit;
+    }
+  }
+
+  &__descripcion {
+  }
+}
