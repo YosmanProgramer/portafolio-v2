@@ -1,8 +1,8 @@
 // core version + navigation, pagination modules:
-import Swiper, { Navigation, Pagination, Autoplay, Thumbs } from 'swiper';
+import Swiper, { Navigation, Pagination, Thumbs } from 'swiper';
 
 // configure Swiper to use modules
-Swiper.use([Navigation, Pagination, Autoplay, Thumbs]);
+Swiper.use([Navigation, Pagination, Thumbs]);
 
 const swiper_thumbs = new Swiper(".swiper-thumbs", {
     spaceBetween: 10,
@@ -25,10 +25,6 @@ const swiper_thumbs = new Swiper(".swiper-thumbs", {
 const swiper_main = new Swiper('.swiper-main', {
     // Optional parameters
     loop: true,
-
-    autoplay: {
-        delay: 5000
-    },
 
     // If we need pagination
     pagination: {
